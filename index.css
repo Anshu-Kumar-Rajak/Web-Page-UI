@@ -1,0 +1,272 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: metropolis;
+}
+
+body {
+    background-image: url("Assets/background-image.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    margin: 0 8%;
+    flex-wrap: wrap;
+}
+
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: black;
+}
+
+.nav-button {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.nav-button button {
+    background-color: #ed017f;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.check-input,
+.check-label {
+    display: none;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    margin-left: 8%;
+    flex-wrap: wrap;
+}
+
+.left-hero {
+    width: 46%;
+    /* width: 40%; */
+    position: relative;
+
+}
+
+.left-hero h1 {
+    font-size: 64px;
+    padding-bottom: 20px;
+}
+
+.left-hero p {
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -100px;
+
+}
+
+.phone {
+    display: flex;
+    gap: 10px;
+}
+
+.phone p {
+    padding-bottom: 0px;
+}
+
+.divider {
+    height: 20px;
+    background-color: black;
+    width: 2px;
+    margin: 0 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.right-hero {
+    width: 54%;
+    /* width: 60%; */
+    position: relative;
+}
+
+.car-loan,
+.home-loan {
+    display: flex;
+    border-radius: 50px;
+    box-shadow: 1px 1px 20px grey;
+    align-items: center;
+    position: absolute;
+    padding: 10px 15px;
+    gap: 20px;
+    background-color: white;
+
+}
+
+.car-loan {
+    top: 0;
+    left: -48px;
+}
+
+.home-loan {
+    top: 80px;
+    right: 26px;
+}
+
+.btn1 {
+    background-color: #ed017f;
+    padding: 10px 18px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    margin-right: 14px;
+
+}
+
+.btn2 {
+    padding: 10px 18px;
+    color: #ed017f;
+    border-radius: 5px;
+    border: 1px solid #ed017f;
+    text-transform: uppercase;
+}
+
+.hero {
+    width: 100%;
+}
+
+@media only screen and (max-width : 768px) {
+    body {
+        height: 100vh;
+    }
+    .car-loan{
+        left: -24px;
+    }
+    .home-loan {
+        bottom: -47px;
+        top: auto;
+        right: 38px;
+    }
+
+    .navbar {
+        margin: 0 3%;
+    }
+
+    .nav-item {
+        margin: 0 5px;
+    }
+
+    .hero-section {
+        margin-left: 3%;
+    }
+
+    .left-hero h1 {
+        font-size: 40px;
+    }
+
+    .left-hero p {
+        font-size: 20px;
+    }
+
+    .btn1,
+    .btn2 {
+        margin: auto 10px;
+    }
+}
+
+@media only screen and (max-width:425px) {
+    .check-label {
+        display: block;
+        cursor: pointer;
+    }
+    .car-loan, .home-loan{
+        display: none;
+    }
+
+    /* #check:checked + .check-label + .nav-menu {
+        display: flex;
+    } */
+    .left-hero,
+    .right-hero {
+        width: 100%;
+    }
+
+    .hero-section {
+        text-align: center;
+        margin: 0px;
+    }
+
+    .left-hero {
+        order: 2;
+        margin: 0 3%;
+    }
+
+    .contact {
+        width: 100%;
+        justify-content: center;
+    }
+    .check-label{
+        order: 5;
+    }
+    #check:checked ~ .nav-menu{
+        right: 0px;
+
+    }
+
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        position: absolute;
+        background-color: white;
+        top: 50px;
+        right: -100%;
+        text-align: center;
+        transition: all 1s ease-in;
+        z-index:9999 ;
+        overflow-y: scroll;
+    }
+    .nav-item{
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px  solid red;
+    }
+    .btn2 {
+        margin-top: 10px;
+    }
+
+}
