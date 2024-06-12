@@ -9,6 +9,7 @@ body {
     background-image: url("Assets/background-image.png");
     background-position: bottom;
     background-repeat: no-repeat;
+    overflow-x: hidden; 
     /* height: 100vh; */
 }
 
@@ -19,13 +20,13 @@ body {
     padding: 5px 0;
     margin: 0 8%;
     flex-wrap: wrap;
+    position: relative;
 }
 
 
 .nav-menu {
     display: flex;
     align-items: center;
-
 }
 
 .nav-item {
@@ -171,7 +172,8 @@ body {
 
 @media only screen and (max-width : 768px) {
     body {
-        height: 100vh;
+        /* height: 100vh; */
+        height: auto;
     }
     .car-loan{
         left: -24px;
@@ -217,9 +219,7 @@ body {
         display: none;
     }
 
-    /* #check:checked + .check-label + .nav-menu {
-        display: flex;
-    } */
+
     .left-hero,
     .right-hero {
         width: 100%;
@@ -244,7 +244,6 @@ body {
     }
     #check:checked ~ .nav-menu{
         right: 0px;
-
     }
 
     .nav-menu{
@@ -254,11 +253,10 @@ body {
         position: absolute;
         background-color: white;
         top: 50px;
-        right: -100%;
+        right: -100%;     
         text-align: center;
         transition: all 1s ease-in;
         z-index:9999 ;
-        overflow-y: scroll;
     }
     .nav-item{
         width: 100%;
