@@ -20,7 +20,6 @@ body {
     padding: 5px 0;
     margin: 0 8%;
     flex-wrap: wrap;
-    position: relative;
 }
 
 
@@ -171,6 +170,7 @@ body {
 }
 
 @media only screen and (max-width : 768px) {
+
     body {
         /* height: 100vh; */
         height: auto;
@@ -211,6 +211,11 @@ body {
 }
 
 @media only screen and (max-width:425px) {
+    .navbar{
+        position: relative;
+    
+        }
+        
     .check-label {
         display: block;
         cursor: pointer;
@@ -240,10 +245,10 @@ body {
         justify-content: center;
     }
     .check-label{
-        order: 5;
+        order: -1;
     }
     #check:checked ~ .nav-menu{
-        right: 0px;
+        left: 0px;
     }
 
     .nav-menu{
@@ -253,10 +258,11 @@ body {
         position: absolute;
         background-color: white;
         top: 50px;
-        right: -100%;     
+        left: -100%;     
         text-align: center;
         transition: all 1s ease-in;
         z-index:9999 ;
+        border: 1px solid red;
     }
     .nav-item{
         width: 100%;
